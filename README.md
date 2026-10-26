@@ -2,7 +2,8 @@
 
 A minimal Android app: open it and it immediately records audio from the
 microphone. The screen shows a single red button. Tap it to stop the
-recording and close the app.
+recording and close the app. Optionally, the recording is then uploaded to
+your Nextcloud.
 
 ## How it works
 
@@ -12,6 +13,24 @@ recording and close the app.
   turns off. A notification with a **Stop** action is shown while recording.
 - Files are saved as AAC `.m4a` in **Music/audiorec** on the phone, named
   `REC_YYYYMMDD_HHMMSS.m4a`. They show up in any file manager or music app.
+
+## Nextcloud upload
+
+1. Tap the small gear in the top-right corner of the main screen.
+2. Enter your server address (`https://cloud.example.com`), username, an
+   **app password** and the target folder (default `Recordings`; sub-folders
+   like `Audio/Meetings` work and are created automatically).
+3. Tap **Test connection**, then **Save**.
+
+After you stop a recording, the app uploads the file via WebDAV and shows a
+notification with the result. If the upload fails (for example no network),
+the recording stays on the phone and the notification says why.
+
+Notes:
+- Only `https://` servers are supported.
+- Create the app password in Nextcloud under Settings → Security → Devices &
+  sessions. It is stored in the app's private storage on the phone.
+- There is no automatic retry yet for failed uploads.
 
 ## Download
 
