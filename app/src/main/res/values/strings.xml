@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Audiorec</string>
+    <string name="stop">Stop</string>
+    <string name="stop_recording">Stop recording</string>
+    <string name="recording">Recording…</string>
+    <string name="channel_name">Recording</string>
+    <string name="permission_needed">Microphone permission is required to record.</string>
+    <string name="recording_failed">Could not start recording.</string>
+</resources>
