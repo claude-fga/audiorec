@@ -2,8 +2,32 @@
     <string name="app_name">Audiorec</string>
     <string name="stop">Stop</string>
     <string name="stop_recording">Stop recording</string>
+    <string name="settings">Settings</string>
     <string name="recording">Recording…</string>
+    <string name="uploading">Uploading to Nextcloud…</string>
     <string name="channel_name">Recording</string>
+    <string name="result_channel_name">Upload result</string>
     <string name="permission_needed">Microphone permission is required to record.</string>
     <string name="recording_failed">Could not start recording.</string>
+
+    <string name="upload_done">Uploaded to Nextcloud</string>
+    <string name="upload_failed">Nextcloud upload failed</string>
+    <string name="upload_failed_detail">%1$s. The recording is still saved on the phone.</string>
+
+    <string name="nextcloud_title">Nextcloud upload</string>
+    <string name="nextcloud_help">After you stop a recording, the file is uploaded to this account and folder. Use an app password (Nextcloud → Settings → Security), not your main password.</string>
+    <string name="hint_server">Server address (https://cloud.example.com)</string>
+    <string name="hint_user">Username</string>
+    <string name="hint_password">App password</string>
+    <string name="hint_folder">Folder (e.g. Recordings)</string>
+    <string name="save">Save</string>
+    <string name="test_connection">Test connection</string>
+    <string name="remove_account">Remove account</string>
+    <string name="saved">Saved. New recordings will be uploaded.</string>
+    <string name="removed">Account removed. Recordings are only kept on the phone.</string>
+    <string name="fill_all">Please fill in server, username and app password.</string>
+    <string name="https_only">Only https:// servers are supported.</string>
+    <string name="testing">Testing connection…</string>
+    <string name="test_ok">Connection OK. The folder is ready.</string>
+    <string name="test_failed">Connection failed: %1$s</string>
 </resources>

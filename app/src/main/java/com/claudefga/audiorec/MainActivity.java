@@ -10,7 +10,8 @@ import android.widget.Toast;
 
 /**
  * Starts recording as soon as the app opens. The single red button stops the
- * recording and closes the app.
+ * recording (and starts the Nextcloud upload, if an account is set up) and
+ * closes the app. A small gear in the corner opens the Nextcloud settings.
  */
 public class MainActivity extends Activity {
 
@@ -22,9 +23,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.stop_button).setOnClickListener(v -> {
-            stopService(new Intent(this, RecorderService.class));
+            // The service finishes the file, uploads it and then stops itself.
+            startService(new Intent(this, RecorderService.class)
+                    .setAction(RecorderService.ACTION_STOP));
             finishAndRemoveTask();
         });
+
+        findViewById(R.id.settings_button).setOnClickListener(v ->
+                startActivity(new Intent(this, SettingsActivity.class)));
 
         if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
             startRecording();
